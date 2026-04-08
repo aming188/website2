@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Randomized Drawing Game</h1>
+    <p class="subtitle">Try to draw the given reference image!</p>
+
+    <div class="controls">
+        <button id="new-btn">New Image</button>
+        <button id="art-btn">Random Artwork</button>
+        <button id="clear-btn">Clear Canvas</button>
+        <button id="save-btn">Save Drawing</button>
+        <button id="load-btn">Load Drawing</button>
+        <button id="timer-toggle">Timer Disabled</button>
+    </div>
+
+    <p id="save-status" class="save-status"></p>
+    <p id="image-info" class="image-info"></p>
+    <p id="timer-display" class="timer-display"></p>
+
+    <div class="drawings">
+        <div class="drawing">
+            <h2>Reference</h2>
+            <img id="reference" src="" alt="Reference image">
+        </div>
+        <div class="panel">
+            <h2>Your Drawing</h2>
+            <canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    <div class="info">
+        <p><strong>New Image</strong> - Pick a random reference image from the local collection</p>
+        <p><strong>Random Artwork</strong> - Fetch a random artwork from the Art Institute of Chicago API!</p>
+        <p><strong>Clear Canvas</strong> - Erase your drawing</p>
+        <p><strong>Save Drawing</strong> - Save your current drawing and reference image</p>
+        <p><strong>Load Drawing</strong> - Obtain your last saved drawing and reference image to continue working!</p>
+        <p><strong>Timing Aspect</strong> - If enabled, a 30 second timer starts whenever a new image is loaded</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
